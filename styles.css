@@ -257,10 +257,11 @@ main{ padding-top:72px; }
 }
 
 /* ---------- Coding: terminal cards ---------- */
-.term-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; }
+.term-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:24px; align-items:stretch; }
 .term-card{
   background:var(--ink-2); border:1px solid var(--line); border-radius:10px;
   overflow:hidden; transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  display:flex; flex-direction:column; height:100%;
 }
 .term-card:hover{
   transform:translateY(-3px); border-color:var(--line-strong);
@@ -270,7 +271,7 @@ main{ padding-top:72px; }
 .dot{ width:9px; height:9px; border-radius:50%; }
 .dot.red{ background:var(--rec); } .dot.amber{ background:var(--brass); } .dot.green{ background:var(--green); }
 .term-path{ margin-left:8px; font-size:12px; color:var(--paper-dim); }
-.term-body{ padding:22px; }
+.term-body{ padding:22px; display:flex; flex-direction:column; flex:1; }
 .term-body h3{ font-size:19px; margin-bottom:10px; }
 .term-body p{ color:var(--paper-dim); font-size:14.5px; margin-bottom:16px; }
 .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
@@ -289,7 +290,7 @@ main{ padding-top:72px; }
 .tag-react{ --tag-color:#61dafb; }
 .tag-node{ --tag-color:#6fbf8b; }
 .tag-nginx{ --tag-color:#6fbf8b; }
-.term-link{ font-size:13px; color:var(--brass); }
+.term-link{ font-size:13px; color:var(--brass); margin-top:auto; }
 .term-link:hover{ color:var(--brass-bright); }
 .gh-btn{ display:inline-flex; align-items:center; gap:10px; margin-top:28px; }
 .gh-btn svg{ flex:none; }
@@ -321,6 +322,8 @@ main{ padding-top:72px; }
 
 /* ---------- About ---------- */
 .about-text{ font-size:19px; color:var(--paper); line-height:1.7; max-width:70ch; margin-bottom:20px; }
+.resume-btn{ display:inline-flex; align-items:center; gap:10px; margin-bottom:20px; }
+.resume-btn svg{ flex:none; }
 .origin-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .origin-block{
   background:var(--ink-2); border:1px solid var(--line); border-radius:10px;
